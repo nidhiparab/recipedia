@@ -46,6 +46,14 @@ section {
   margin: 5rem 0;
 }
 
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
 .container {
   margin-inline: auto;
   width: min(90%, 900px);
@@ -160,6 +168,12 @@ section {
   background: var(--primary-darker);
 }
 
+/* Page footer */
+
+.page-footer {
+  padding: 2rem;
+}
+
 /* Utility classes */
 
 .utils-flex {
@@ -188,4 +202,8 @@ section {
 
 .utils-invert-x {
   scale: -1 1;
+}
+
+.utils-text-center {
+  text-align: center;
 }

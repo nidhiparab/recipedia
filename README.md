@@ -8,6 +8,10 @@ This project is an example of homepage of a website that is hosting recipes.
 The interface should give the user friendly cards in which they can see the
 image, name and link for a recipe.
 
+## Screenshots
+
+![the current state of the page](screenshots/full_page.png)
+
 ## Installation
 
 This project is using Vite to manage the files and create a development
