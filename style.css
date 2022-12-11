@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'inter', 'sans-serif';
+}
+
+img {
+  object-fit: cover;
+}
+
+/* Banner */
+
+.banner {
+  position: relative;
+  width: 100vw;
+  height: 32rem;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-title {
+  top: 50%;
+  left: 3rem;
+  font-size: 3rem;
+  width: 35%;
+  color: white;
+  backdrop-filter: grayscale(1) blur(2px) brightness(0.8);
+  padding: 1rem;
+}
+
+/* Utility classes */
+
+.utils-absolute {
+  position: absolute;
+}
+
+.utils-invert-x {
+  scale: -1 1;
+}
