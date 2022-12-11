@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   --primary: hsl(4, 84%, 36%);
@@ -19,6 +20,16 @@ body {
   font-family: 'inter', 'sans-serif';
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'lora', 'serif';
+  font-weight: normal;
+}
+
 img {
   object-fit: cover;
 }
@@ -27,9 +38,19 @@ main {
   margin: 5rem 0;
 }
 
+h1 {
+  margin-bottom: 5rem;
+}
+
 .container {
   margin-inline: auto;
   width: min(90%, 900px);
+}
+
+.recipes-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 /* Banner */
