@@ -7,7 +7,11 @@
   --primary-darker: hsl(4, 84%, 16%);
   --on-primary: white;
 
+  --transparent-white: hsl(0, 0%, 100%, 90%);
+
   --light-gray: hsl(0, 0%, 85%);
+
+  --low-shadow: 0 2px 5px hsl(0, 0%, 0%, 10%);
 }
 
 * {
@@ -68,23 +72,31 @@ a:hover {
 /* Page header */
 
 .page-header {
-  background: white;
+  background: var(--transparent-white);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 5px hsl(0, 0%, 0%, 10%);
+  box-shadow: var(--low-shadow);
+  padding: 1rem;
+  backdrop-filter: blur(5px);
 }
 
 .page-header-container {
-  padding: 1rem;
+  width: min(90%, 1300px);
+  margin-inline: auto;
 }
 
 .page-header-nav-item {
   cursor: pointer;
+  transition: translate 200ms;
 }
 
-.page-header-nav-item:hover {
-  text-decoration: underline;
+.page-header-nav-item[data-is-active='true'] {
+  font-weight: bold;
+}
+
+.page-header-nav-item:not([data-is-active='true']):hover {
+  translate: 0 -3px;
 }
 
 /* Banner */
@@ -118,6 +130,10 @@ a:hover {
   border: 1px solid var(--light-gray);
   overflow: hidden;
   border-radius: 10px;
+}
+
+.recipe-card:hover {
+  box-shadow: var(--low-shadow);
 }
 
 .recipe-card-image {
@@ -206,4 +222,8 @@ a:hover {
 
 .utils-text-center {
   text-align: center;
+}
+
+.utils-cursor-pointer {
+  cursor: pointer;
 }

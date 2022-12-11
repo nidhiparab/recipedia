@@ -74,6 +74,34 @@ to=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   })
 ];
 
+const $weeklyHighlights = [
+  createRecipeCard({
+    name: 'Spaghetti',
+    category: 'Pasta',
+    rating: 5,
+    preparationTime: '45min',
+    image: 'https://images.unsplash.com/photo-1595295333158-4742f28fbd85?ixlib=\
+rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop\
+&w=880&q=80'
+  }),
+  createRecipeCard({
+    name: 'Bread',
+    category: 'Pasta',
+    rating: 5,
+    preparationTime: '10min',
+    image: 'https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?\
+auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+  }),
+  createRecipeCard({
+    name: 'Salad',
+    category: 'Vegetables',
+    rating: 5,
+    preparationTime: '20min',
+    image: 'https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg?au\
+to=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+  })
+];
+
 const $communitySelections = [
   createRecipeCard({
     name: 'Spaghetti',
@@ -103,6 +131,7 @@ to=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
 ];
 
 addRecipeCardsToContainer('.todays-highlights-container', $todaysHighlights);
+addRecipeCardsToContainer('.weekly-highlights-container', $weeklyHighlights);
 addRecipeCardsToContainer(
   '.community-selections-container',
   $communitySelections
