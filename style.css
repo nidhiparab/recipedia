@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-  --primary: hsl(4, 84%, 36%);
-  --primary-dark: hsl(4, 84%, 26%);
-  --primary-darker: hsl(4, 84%, 16%);
+  --primary: hsl(15, 81%, 47%);
+  --primary-dark: hsl(15, 81%, 37%);
+  --primary-darker: hsl(15, 81%, 27%);
   --on-primary: white;
 
   --transparent-white: hsl(0, 0%, 100%, 90%);
@@ -93,10 +93,15 @@ a:hover {
 
 .page-header-nav-item[data-is-active='true'] {
   font-weight: bold;
+  color: var(--primary);
 }
 
 .page-header-nav-item:not([data-is-active='true']):hover {
   translate: 0 -3px;
+}
+
+.page-header-logo {
+  font-size: 1.2rem;
 }
 
 /* Banner */
@@ -135,14 +140,33 @@ a:hover {
 
 .banner-title {
   animation: to-full-opacity 3s forwards;
-  backdrop-filter: grayscale(1) blur(5px) brightness(0.8);
-  color: white;
+  backdrop-filter: blur(2px);
+  background: hsl(0, 0%, 100%, 50%);
+  border-radius: 10px;
+  color: black;
   font-size: 3rem;
-  left: 3rem;
-  padding: 1rem;
+  left: 50%;
+  padding: 2rem 3rem;
   top: 50%;
-  width: 35%;
-  translate: 0 -50%;
+  translate: -50% -50%;
+  text-align: center;
+}
+
+.banner-title-icon {
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: 1rem;
+  border-radius: 10px;
+  position: absolute;
+  top: -20%;
+  left: 45%;
+}
+
+.banner-image {
+  background-image: url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 /* Recipe card */
