@@ -57,6 +57,28 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+/* Page header */
+
+.page-header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px hsl(0, 0%, 0%, 10%);
+}
+
+.page-header-container {
+  padding: 1rem;
+}
+
+.page-header-nav-item {
+  cursor: pointer;
+}
+
+.page-header-nav-item:hover {
+  text-decoration: underline;
+}
+
 /* Banner */
 
 .banner {
@@ -146,6 +168,10 @@ section {
 
 .utils-ai-c {
   align-items: center;
+}
+
+.utils-jc-sb {
+  justify-content: space-between;
 }
 
 .utils-gap-0-5 {
