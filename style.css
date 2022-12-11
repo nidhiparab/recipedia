@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+:root {
+  --primary: hsl(161, 84%, 36%);
+  --primary-dark: hsl(161, 84%, 26%);
+  --primary-darker: hsl(161, 84%, 16%);
+  --on-primary: white;
+  --light-gray: hsl(0, 0%, 85%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +20,15 @@ body {
 
 img {
   object-fit: cover;
+}
+
+main {
+  margin: 5rem 0;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 900px);
 }
 
 /* Banner */
@@ -35,6 +52,52 @@ img {
   color: white;
   backdrop-filter: grayscale(1) blur(2px) brightness(0.8);
   padding: 1rem;
+}
+
+/* Recipe card */
+
+.recipe-card {
+  max-width: 300px;
+  border: 1px solid var(--light-gray);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.recipe-card-image {
+  width: 100%;
+  height: 150px;
+}
+
+.recipe-card-body {
+  padding: 2rem 1.5rem;
+}
+
+.recipe-card-button {
+  margin-top: 1rem;
+}
+
+/* Button */
+
+.button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  display: block;
+  width: fit-content;
+  background: var(--primary);
+  text-decoration: none;
+  color: var(--on-primary);
+  border-radius: 30px;
+  transition: 200ms;
+  font-size: 0.9rem;
+  border: none;
+}
+
+.button:hover {
+  background: var(--primary-dark);
+}
+
+.button:active {
+  background: var(--primary-darker);
 }
 
 /* Utility classes */

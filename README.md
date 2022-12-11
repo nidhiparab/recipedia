@@ -13,9 +13,16 @@ image, name and link for a recipe.
 This project is using Vite to manage the files and create a development
 environment with web server and hot update. To use it, follow these steps:
 
-- install `NodeJS` (a javascript runtime for desktop) and a package manager for the Javascript libraries such as `npm` (that may come built-in with NodeJS) or `yarn`.
-  - If you are a Windows user, you can download an installer in the official [NodeJS website](https://nodejs.org/en/).
-  - If you are a Linux user, you can probably find those as packages in your distro's package manager, such as `apt` or `pacman` or as an [snap package](https://snapcraft.io/node). They might be separately. In any case, you can still download their binaries in the same website as Windows users and add them to the system's `$PATH` variable.
+- install `NodeJS` (a javascript runtime for desktop) and a package manager for
+the Javascript libraries such as `npm` (that may come built-in with NodeJS) or
+`yarn`.
+  - If you are a Windows user, you can download an installer in the official
+  [NodeJS website](https://nodejs.org/en/).
+  - If you are a Linux user, you can probably find those as packages in your
+  distro's package manager, such as `apt` or `pacman` or as an
+  [snap package](https://snapcraft.io/node). They might be separately. In any
+  case, you can still download their binaries in the same website as Windows
+  users and add them to the system's `$PATH` variable.
 - Download this repository: you can do it using `git` by using the command
 
 ```bash
@@ -30,13 +37,15 @@ or you can download it as a `zip` file in the GitHub page.
 npm i
 ```
 
-- You can, then, open a web server to preview the page using `vite` by running the npm script `dev` by using the following command:
+- You can, then, open a web server to preview the page using `vite` by running
+the npm script `dev` by using the following command:
 
 ```bash
 npm run dev
 ```
 
-You can stop the development server by hitting `Ctrl + C` or closing your terminal.
+You can stop the development server by hitting `Ctrl + C` or closing your
+terminal.
 
 ## Issues and Contributions
 
