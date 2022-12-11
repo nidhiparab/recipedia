@@ -1,4 +1,15 @@
-function createRecipeCard(name, category, rating, preparationTime, image) {
+/**
+ * Creates a recipe card element by using its template.
+ * @param {{
+ *   name: string,
+ *   category: string,
+ *   rating: number,
+ *   preparationTime: string,
+ *   image: string
+ * }} recipeProperties An object that contains the recipe's properties.
+ * @returns {Element} The recipe card element created.
+ */
+function createRecipeCard({ name, category, rating, preparationTime, image }) {
   const $template = document.querySelector('.js-template-recipe-card');
   const $recipeCard = $template.content.cloneNode(true);
 
@@ -22,35 +33,77 @@ function createRecipeCard(name, category, rating, preparationTime, image) {
   return $recipeCard;
 }
 
+/**
+ * Adds the recipe cards elements that are inside of an array to the container
+ * that corresponds to a certain query in the document.
+ * @param {string} containerQuery The query to find the container.
+ * @param {Element} $recipeCards The array containing the recipe cards elements.
+ */
+function addRecipeCardsToContainer(containerQuery, $recipeCards) {
+  const $container = document.querySelector(containerQuery);
+  $recipeCards.forEach(($recipeCard) => {
+    $container.append($recipeCard);
+  });
+}
+
 const $todaysHighlights = [
-  createRecipeCard(
-    'Spaghetti',
-    'Pasta',
-    5,
-    '45min',
-    'https://images.unsplash.com/photo-1595295333158-4742f28fbd85?ixlib=rb-4.0.\
-3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&\
-q=80'
-  ),
-  createRecipeCard(
-    'Bread',
-    'Pasta',
-    5,
-    '10min',
-    'https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=co\
-mpress&cs=tinysrgb&w=1260&h=750&dpr=1'
-  ),
-  createRecipeCard(
-    'Salad',
-    'Vegetables',
-    5,
-    '20min',
-    'https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg?auto=comp\
-ress&cs=tinysrgb&w=1260&h=750&dpr=1'
-  )
+  createRecipeCard({
+    name: 'Spaghetti',
+    category: 'Pasta',
+    rating: 5,
+    preparationTime: '45min',
+    image: 'https://images.unsplash.com/photo-1595295333158-4742f28fbd85?ixlib=\
+rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop\
+&w=880&q=80'
+  }),
+  createRecipeCard({
+    name: 'Bread',
+    category: 'Pasta',
+    rating: 5,
+    preparationTime: '10min',
+    image: 'https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?\
+auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+  }),
+  createRecipeCard({
+    name: 'Salad',
+    category: 'Vegetables',
+    rating: 5,
+    preparationTime: '20min',
+    image: 'https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg?au\
+to=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+  })
 ];
-$todaysHighlights.forEach(($todaysHighlight) => {
-  const $todaysHighlightsContainer =
-      document.querySelector('.todays-highlights-container');
-  $todaysHighlightsContainer.append($todaysHighlight);
-});
+
+$communitySelections = [
+  createRecipeCard({
+    name: 'Spaghetti',
+    category: 'Pasta',
+    rating: 5,
+    preparationTime: '45min',
+    image: 'https://images.unsplash.com/photo-1595295333158-4742f28fbd85?ixlib=\
+rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop\
+&w=880&q=80'
+  }),
+  createRecipeCard({
+    name: 'Bread',
+    category: 'Pasta',
+    rating: 5,
+    preparationTime: '10min',
+    image: 'https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?\
+auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+  }),
+  createRecipeCard({
+    name: 'Salad',
+    category: 'Vegetables',
+    rating: 5,
+    preparationTime: '20min',
+    image: 'https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg?au\
+to=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+  })
+];
+
+addRecipeCardsToContainer('.todays-highlights-container', $todaysHighlights);
+addRecipeCardsToContainer(
+  '.community-selections-container',
+  $communitySelections
+);
