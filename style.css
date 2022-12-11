@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
-  --primary: hsl(161, 84%, 36%);
-  --primary-dark: hsl(161, 84%, 26%);
-  --primary-darker: hsl(161, 84%, 16%);
+  --primary: hsl(4, 84%, 36%);
+  --primary-dark: hsl(4, 84%, 26%);
+  --primary-darker: hsl(4, 84%, 16%);
   --on-primary: white;
+
   --light-gray: hsl(0, 0%, 85%);
 }
 
@@ -45,13 +46,13 @@ main {
 }
 
 .banner-title {
-  top: 50%;
-  left: 3rem;
-  font-size: 3rem;
-  width: 35%;
-  color: white;
   backdrop-filter: grayscale(1) blur(2px) brightness(0.8);
+  color: white;
+  font-size: 3rem;
+  left: 3rem;
   padding: 1rem;
+  top: 50%;
+  width: 35%;
 }
 
 /* Recipe card */
@@ -72,6 +73,17 @@ main {
   padding: 2rem 1.5rem;
 }
 
+.recipe-card-category {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 40%);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.recipe-card-name {
+  margin-bottom: 1rem;
+}
+
 .recipe-card-button {
   margin-top: 1rem;
 }
@@ -79,17 +91,17 @@ main {
 /* Button */
 
 .button {
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  display: block;
-  width: fit-content;
   background: var(--primary);
-  text-decoration: none;
-  color: var(--on-primary);
   border-radius: 30px;
-  transition: 200ms;
-  font-size: 0.9rem;
   border: none;
+  color: var(--on-primary);
+  cursor: pointer;
+  display: block;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: 200ms;
+  width: fit-content;
 }
 
 .button:hover {
@@ -101,6 +113,22 @@ main {
 }
 
 /* Utility classes */
+
+.utils-flex {
+  display: flex;
+}
+
+.utils-ai-c {
+  align-items: center;
+}
+
+.utils-gap-0-5 {
+  gap: 0.5rem;
+}
+
+.utils-gap-1 {
+  gap: 1rem;
+}
 
 .utils-absolute {
   position: absolute;
